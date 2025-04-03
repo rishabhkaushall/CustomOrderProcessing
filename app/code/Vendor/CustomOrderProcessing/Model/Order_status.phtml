@@ -1,0 +1,6 @@
+<h1>Order Status Updates</h1>
+<ul>
+    <?php foreach ($block->getOrderStatusUpdates() as $update): ?>
+        <li><?php echo $update['timestamp'] . ': Order ' . $update['order_id'] . ' changed from ' . $update['old_status'] . ' to ' . $update['new_status']; ?></li>
+    <?php endforeach; ?>
+</ul>
